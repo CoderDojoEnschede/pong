@@ -58,16 +58,16 @@ function maakMuur(verticalePositie) {
 }
 // ▼▼▼ Opdracht 1 ▼▼▼ //
 
-const muurBovenkant = maakMuur(0); // Helemaal bovenaan
-const muurOnderkant = maakMuur(speelveld.hoogte - roosterGrootte); // Onderkant van het speelveld min de roosterGrootte.
+const muurBovenkant = maakMuur(-100); // Helemaal bovenaan
+const muurOnderkant = maakMuur(-100); // Onderkant van het speelveld min de roosterGrootte.
 
 // ▲▲▲ Opdracht 1 ▲▲▲ //
 
 
 // ▼▼▼ Opdracht 2 ▼▼▼ //
 
-const linkerBatje = maakBatje(roosterGrootte * 2); // 2x de roostergrootte vanaf de Linkerkant (2x losse ruimte aan de linkerkant)
-const rechterBatje = maakBatje(speelveld.breedte - 3 * roosterGrootte); // 3x de roostergrootte vanaf de Rechterkant (2x losse ruimte + 1x de breedte van het batje)
+const linkerBatje = maakBatje(-100); // 2x de roostergrootte vanaf de Linkerkant (2x losse ruimte aan de linkerkant)
+const rechterBatje = maakBatje(-100); // 3x de roostergrootte vanaf de Rechterkant (2x losse ruimte + 1x de breedte van het batje)
 
 // ▲▲▲ Opdracht 2 ▲▲▲ //
 
@@ -132,16 +132,12 @@ function verwerkBalletje() {
 
         // ▼▼▼ Opdracht 4 (a) ▼▼▼ //
 
-        balletje.keerOm();
-
         // ▲▲▲ Opdracht 4 (a) ▲▲▲ //
 
     } else if (balletje.y + roosterGrootte > speelveld.hoogte - roosterGrootte) {
         balletje.y = speelveld.hoogte - roosterGrootte * 2;
 
         // ▼▼▼ Opdracht 4 (b) ▼▼▼ //
-
-        balletje.keerOm();
 
         // ▲▲▲ Opdracht 4 (b) ▲▲▲ //
     }
@@ -153,9 +149,9 @@ function verwerkBalletje() {
         // ▼▼▼ Opdracht 12 ▼▼▼ //
 
         if (balletje.x < 0) {
-            score.rechts += 1;
+
         } else if (balletje.x > speelveld.breedte) {
-            score.links += 1;
+
         }
 
         // ▲▲▲ Opdracht 12 ▲▲▲ //
@@ -245,11 +241,11 @@ function loop() {
     tekenVierkant('white', rechterBatje);
 
 
+    // ▼▼▼ Opdracht 10 ▼▼▼ //
     // ▼▼▼ Opdracht 3 ▼▼▼ //
 
-    tekenCirkel('white', balletje);
-
     // ▲▲▲ Opdracht 3 ▲▲▲ //
+    // ▲▲▲ Opdracht 10 ▲▲▲ //
 
 
     tekenVierkant('lightgrey', muurBovenkant);
@@ -270,9 +266,6 @@ function loop() {
 
     // ▼▼▼ Opdracht 11 ▼▼▼ //
 
-    tekenTekst('lightblue', speelveld.breedte / 2 - 4 * roosterGrootte, roosterGrootte * 5, score.links);
-    tekenTekst('lightblue', speelveld.breedte / 2 + 4 * roosterGrootte, roosterGrootte * 5, score.rechts);
-
     // ▲▲▲ Opdracht 11 ▲▲▲ //
 }
 
@@ -284,16 +277,12 @@ function luisterToetsIndrukken(e) {
 
         // ▼▼▼ Opdracht 5 (a) ▼▼▼ //
 
-        rechterBatje.beweegOmhoog();
-
         // ▲▲▲ Opdracht 5 (a) ▲▲▲ //
 
     } else if (e.key === 'ArrowDown' || e.key === 'Down') {
         // Pijltje naar onder zorgt ervoor dat het rechter batje omlaag gaat
 
         // ▼▼▼ Opdracht 5 (b) ▼▼▼ //
-
-        rechterBatje.beweegOmlaag();
 
         // ▲▲▲ Opdracht 5 (b) ▲▲▲ //
 
@@ -306,8 +295,6 @@ function luisterToetsIndrukken(e) {
 
         // ▼▼▼ Opdracht 5 (c) ▼▼▼ //
 
-        linkerBatje.beweegOmhoog();
-
         // ▲▲▲ Opdracht 5 (c) ▲▲▲ //
 
     // ▼▼▼ Opdracht 6 (b) ▼▼▼ //
@@ -316,8 +303,6 @@ function luisterToetsIndrukken(e) {
         // ▲▲▲ Opdracht 6 (b) ▲▲▲ //
 
         // ▼▼▼ Opdracht 5 (d) ▼▼▼ //
-
-        linkerBatje.beweegOmlaag();
 
         // ▲▲▲ Opdracht 5 (d) ▲▲▲ //
 
@@ -329,7 +314,7 @@ function luisterToetsLoslaten(e) {
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Up' || e.key === 'Down') {
 
         // ▼▼▼ Opdracht 5 (e) ▼▼▼ //
-        rechterBatje.stop();
+
         // ▲▲▲ Opdracht 5 (e) ▲▲▲ //
 
     }
@@ -339,8 +324,6 @@ function luisterToetsLoslaten(e) {
     // ▲▲▲ Opdracht 6 (c) ▲▲▲ //
 
         // ▼▼▼ Opdracht 5 (f) ▼▼▼ //
-
-        linkerBatje.stop();
 
         // ▲▲▲ Opdracht 5 (f) ▲▲▲ //
 
