@@ -245,11 +245,13 @@ function loop() {
     tekenVierkant('white', rechterBatje);
 
 
+    // ▼▼▼ Opdracht 10 ▼▼▼ //
     // ▼▼▼ Opdracht 3 ▼▼▼ //
 
     tekenCirkel('white', balletje);
 
     // ▲▲▲ Opdracht 3 ▲▲▲ //
+    // ▲▲▲ Opdracht 10 ▲▲▲ //
 
 
     tekenVierkant('lightgrey', muurBovenkant);
