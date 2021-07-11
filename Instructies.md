@@ -12,7 +12,7 @@ Elke opdracht bevat uitleg, en dingen die jij zelf moet doen. De dingen die jij 
 
 De code staat in *Trinket*. Dat is een website waarop je kan programmeren, en direct het resultaat kan bekijken.
 
-▶▶▶ Open Trinket door op de link te klikken: // TODO
+▶▶▶ Open Trinket door op de link te klikken: https://trinket.io/embed/html/8fb18a7459
 
 Je moet nu aan de linker kant code zien, en aan de rechter kant het Pong spel.
 
@@ -20,7 +20,7 @@ Als je aan de linker kant de code aanpast, dan verandert de website automatisch 
 
 Dat was gemakkelijk! Nu komt het echte werk!
 
-// TODO ! [ ] (images/1.png)
+![](images/0.png) // TODO
 
 ### Opdracht 1: Muren tekenen
 
@@ -48,7 +48,7 @@ Dat komt omdat we een foutje hebben gemaakt. De coordinaat die de we invullen is
 
 Nu moet er wel een muur aan de onderkant van het speelveld verschijnen.
 
-// TODO ! [ ] (images/2.png)
+![](images/1.png)
 
 ### Opdracht 2: Batjes tekenen
 
@@ -70,7 +70,7 @@ Het rechter batje moet getekend worden op 3 keer de grootte van het rooster van 
 
 ▶▶▶ Vul voor het linker batje `speelveld.breedte - 3 * roosterGrootte` in in de functie `maakBatje`.
 
-// TODO ! [ ] (images/3.png)
+![](images/2.png)
 
 ### Opdracht 3: Een bal
 
@@ -86,7 +86,7 @@ De functie `tekenVierkant` tekent een vierkant op op het scherm. De functie roep
 
 Nu moet er een balletje verschijnen op het scherm.
 
-// TODO ! [ ] (images/4.png)
+![](images/3.png)
 
 ### Opdracht 4: Stuiterbal
 
@@ -101,6 +101,8 @@ We kunnen de bal laten stuiteren door hem om te laten keren van ritchting als de
 ▶▶▶ Zoek *Opdracht 4 (b)*. Hier raakt de bal de onderste muur. Laat be bal omkeren.
 
 Nu moet de bal stuiteren als de bal de bovenste of onderste muur raakt.
+
+![](images/4.png)
 
 ### Opdracht 5: Toetsenbord
 
@@ -138,6 +140,8 @@ Zoals je kan zien, stoppen de batjes nooit meer met bewegen. Het batje moet stop
 
 Probeer de batjes te bewegen in het spel. Als je de pijtjestoetsen of `w` of `s` indrukt beweegt het batje. Als je te toetsen loslaat, dan stopt het batje met bewegen.
 
+![](images/6.png)
+
 ### Opdracht 6: Wijzigen van toetsen
 
 In opdracht 5 hebben we de batjes laten bewegen. De toetsen waren `w` en `s` voor het linkerbatje.
@@ -151,6 +155,8 @@ Laten we de toetsen wijzigen waarmee het linkerbatje gaat bewegen, bijvoorbeeld 
 ▶▶▶ Bij *Opdracht 6 (b)*. Wijzig de toets `s` naar `a` om het linker batje omlaag te laten bewegen.
 
 ▶▶▶ Bij *Opdracht 6 (c)*. Wijzig de toets `w` naar `q` en `s` naar `a` om het linker batje te laten stoppen.
+
+![](images/6.png)
 
 ### Opdracht 7: Snelheid
 
@@ -202,6 +208,8 @@ Op de website staat een lijst van kleuren met namen. Al deze namen kan je gebrui
 
 ▶▶▶ Verander de kleur van de bovenste muur, de onderste muur, het linker batje, het rechter batje en van de bal.
 
+![](images/9.png)
+
 ### Opdracht 10: Ronde bal
 
 De bal is een vierkant blokje. Eigenlijk is dat vreemd want ballen zijn meestal rond. Laten we onze Pong bal ook rond maken.
@@ -213,6 +221,8 @@ Hier staat dat `balletje` als een vierkant wordt getekend.
 ▶▶▶ Verander de functie aanroep `tekenVierkant` naar `tekenCirkel`.
 
 De bal moet nu als een cirkel worden getekend.
+
+![](images/10.png)
 
 ### Opdracht 11: Score tonen
 
@@ -236,6 +246,8 @@ Je mag de argumenten variëren. Zie je het getal *0* verschijnen in het speelvel
 
 Nu moeten beide spelers een score in het speelveld hebben staan.
 
+![](images/11.png)
+
 ### Opdracht 12: Score tellen
 
 We tonen nu de scores van de spelers, maar er staat altijd *0* in beeld. We moeten de score tellen als er een punt wordt gescoort.
@@ -251,3 +263,5 @@ Je kunt een speler een punt geven door `score.links += 1;` of `score.rechts += 1
 ▶▶▶ Probeer de speler 10 punten te geven als er wordt gescoret, in plaats van één punt.
 
 Zie je dat de score wordt opgehoogd als een speler een punt scoort? Goed zo!
+
+![](images/12.png)
