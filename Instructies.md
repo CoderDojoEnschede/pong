@@ -186,8 +186,68 @@ Er staan twee variabelen: `dx` en `dy`. De variabelen bepalen welke kant de bal 
 
 ### Opdracht 9: Kleuren
 
+Ons Pong spel is zwart en wit, met grijs erbij. Dat is een beetje saai. Laten we het spel wat mooier maken door kleurtjes toe te voegen aan de bal, de muren en de batjes.
+
+▶▶▶ Zoek *Opdracht 9* in het bestand `pong.js`. (Let op, dit zijn meerdere regels.)
+
+Hier worden meerdere functies aangeroepen die dingen tekenen in het spel. Je kan elk onderdeel dat wordt getekend een andere kleur geven door de naam van de kleur op te geven.
+
+▶▶▶ Verander de kleur van de bovenste muur naar `'red'` (*red* is rood in het Engels).
+
+Kan je zien dat de muur rood wordt?
+
+▶▶▶ Open in een nieuw tabblad de website https://htmlcolorcodes.com/color-names/.
+
+Op de website staat een lijst van kleuren met namen. Al deze namen kan je gebruiken als kleurtje.
+
+▶▶▶ Verander de kleur van de bovenste muur, de onderste muur, het linker batje, het rechter batje en van de bal.
+
 ### Opdracht 10: Ronde bal
 
-### Opdracht 11: Score
+De bal is een vierkant blokje. Eigenlijk is dat vreemd want ballen zijn meestal rond. Laten we onze Pong bal ook rond maken.
 
-### Opdracht 12: Bal willekeurig laten stuiteren
+▶▶▶ Zoek *Opdracht 10* in het bestand `pong.js`.
+
+Hier staat dat `balletje` als een vierkant wordt getekend.
+
+▶▶▶ Verander de functie aanroep `tekenVierkant` naar `tekenCirkel`.
+
+De bal moet nu als een cirkel worden getekend.
+
+### Opdracht 11: Score tonen
+
+Als een van de spelers een punt scoort, dan begint de bal overnieuw in het midden. Maar we zien niet wie er voor staat.
+
+We gaan de score van de spelers tonen in het speelveld.
+
+▶▶▶ Zoek *Opdracht 11* in het bestand `pong.js`.
+
+Er is een functie `tekenTekst(...)`. Die functie kan tekst tekenen in het speelveld. De argumenten zijn als volgt:
+1. De kleur van de tekst.
+2. De x-cooördinaat van (het midden van) de tekst.
+3. De grootte van de tekst.
+4. De tekst.
+
+▶▶▶ Roep de functie `tekenTekst` aan om de score van de linker speler te tekenen:`tekenTekst('lightblue', speelveld.breedte / 2 - 4 * roosterGrootte, roosterGrootte * 5, score.links);`.
+
+Je mag de argumenten variëren. Zie je het getal *0* verschijnen in het speelveld?
+
+▶▶▶ Roep de functie `tekenTekst` aan om de score van de rechter speler te tekenen. Bepaal zelf welke argumenten moeten veranderen om de score op de juiste plek te krijgen.
+
+Nu moeten beide spelers een score in het speelveld hebben staan.
+
+### Opdracht 12: Score tellen
+
+We tonen nu de scores van de spelers, maar er staat altijd *0* in beeld. We moeten de score tellen als er een punt wordt gescoort.
+
+▶▶▶ Zoek *Opdracht 12* in het bestand `pong.js`.
+
+Er staat een `if` en een `else if`. Daarbinnen kan de score van elke speler worden opgehoogd.
+
+Je kunt een speler een punt geven door `score.links += 1;` of `score.rechts += 1;` te typen.
+
+▶▶▶ Zet in de `if` en in de `else if` binnen de `{` en `}` de code neer om de punten op te hogen van de spelers, als er wordt gescoort.
+
+▶▶▶ Probeer de speler 10 punten te geven als er wordt gescoret, in plaats van één punt.
+
+Zie je dat de score wordt opgehoogd als een speler een punt scoort? Goed zo!

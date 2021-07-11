@@ -27,6 +27,11 @@ const snelheidVanBalletje = 3;
 
 // --- Opdracht 7 --- //
 
+const score = {
+    links: 0,
+    rechts: 0,
+}
+
 
 function maakBatje(horizontalePositie) {
     return {
@@ -145,6 +150,17 @@ function verwerkBalletje() {
     if ((balletje.x < 0 || balletje.x > speelveld.breedte) && !balletje.resetting) {
         balletje.resetting = true;
 
+        // --- Opdracht 12 --- //
+
+        if (balletje.x < 0) {
+            score.rechts += 1;
+        } else if (balletje.x > speelveld.breedte) {
+            score.links += 1;
+        }
+
+        // --- Opdracht 12 --- //
+
+
         // We geven de spelers een halve seconde pauze voordat het balletje opnieuw begint.
         setTimeout(() => {
             balletje.resetting = false;
@@ -178,7 +194,25 @@ function tekenRooster(kleur, lijnDikte) {
 
 function tekenVierkant(kleur, vierkant) {
     context.fillStyle = kleur;
+
     context.fillRect(vierkant.x, vierkant.y, vierkant.breedte, vierkant.hoogte);
+}
+
+function tekenCirkel(kleur, cirkel) {
+    context.fillStyle = kleur;
+
+    context.beginPath();
+    context.ellipse(cirkel.x + cirkel.breedte / 2, cirkel.y + cirkel.hoogte / 2, cirkel.breedte / 2, cirkel.hoogte / 2, 0, 0, 2 * Math.PI);
+    context.fill();
+}
+
+function tekenTekst(kleur, x, grootte, tekst) {
+    context.fillStyle = kleur;
+    context.font = `${grootte}px sans-serif`;
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+
+    context.fillText(String(tekst), x, speelveld.hoogte / 2);
 }
 
 // Spel lus
@@ -203,6 +237,8 @@ function loop() {
         balletje.x = rechterBatje.x - balletje.breedte;
     }
 
+    // --- Opdracht 9 --- //
+
     tekenRooster('grey', 1);
 
     tekenVierkant('white', linkerBatje);
@@ -211,7 +247,7 @@ function loop() {
 
     // --- Opdracht 3 --- //
 
-    tekenVierkant('white', balletje);
+    tekenCirkel('white', balletje);
 
     // --- Opdracht 3 --- //
 
@@ -228,6 +264,16 @@ function loop() {
             hoogte: roosterGrootte
         });
     }
+
+    // --- Opdracht 9 --- //
+
+
+    // --- Opdracht 11 --- //
+
+    tekenTekst('lightblue', speelveld.breedte / 2 - 4 * roosterGrootte, roosterGrootte * 5, score.links);
+    tekenTekst('lightblue', speelveld.breedte / 2 + 4 * roosterGrootte, roosterGrootte * 5, score.rechts);
+
+    // --- Opdracht 11 --- //
 }
 
 // Luister naar toets aanslagen om de batjes naar boven of beneden te bewegen
