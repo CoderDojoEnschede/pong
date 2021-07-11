@@ -12,7 +12,7 @@ Elke opdracht bevat uitleg, en dingen die jij zelf moet doen. De dingen die jij 
 
 De code staat in *Trinket*. Dat is een website waarop je kan programmeren, en direct het resultaat kan bekijken.
 
-▶▶▶ Open Trinket door op de link te klikken: // TODO
+▶▶▶ Open Trinket door op de link te klikken: https://trinket.io/embed/html/8fb18a7459
 
 Je moet nu aan de linker kant code zien, en aan de rechter kant het Pong spel.
 
