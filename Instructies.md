@@ -90,20 +90,104 @@ Nu moet er een balletje verschijnen op het scherm.
 
 ### Opdracht 4: Stuiterbal
 
+De bal moet niet alleen bewegen, maar ook stuiteren! Nu schuift de bal langs de rand van het speelveld. Dat klopt niet!
+
+▶▶▶ Zoek *Opdracht 4* in het bestand `pong.js`. Er staan twee opdrachten, *a* en *b*.
+
+We kunnen de bal laten stuiteren door hem om te laten keren van ritchting als de bal de muur raakt. De bal heeft een functie `keerOm()` om de bal te laten omkeren.
+
+▶▶▶ Zoek *Opdracht 4 (a)*. Hier raakt de bal de bovenste muur. Laat be bal omkeren door `balletje.keerOm();` aan te roepen.
+
+▶▶▶ Zoek *Opdracht 4 (b)*. Hier raakt de bal de onderste muur. Laat be bal omkeren.
+
+Nu moet de bal stuiteren als de bal de bovenste of onderste muur raakt.
+
 ### Opdracht 5: Toetsenbord
+
+De batjes staan nu stil aan de linker- en rechterkant van het speelveld. De spelers moeten met toetsen op het toetsenbord de batjes kunnen bewegen.
+
+In de code moeten we *luisteren* naar te toetsen van het toetsenbord. Als een speler een toets indrukt, dan kunnen wij een actie uitvoeren in de code, zoals het bewegen van het batje.
+
+Voor het rechterbatje gebruiken we de pijltjestoetsen omhoog en omlaag. Voor het linkerbatje gebruiken we de toetsen `w` en `s`.
+
+▶▶▶ Zoek *Opdracht 5* in het bestand `pong.js`. Er staan zes opdrachten, *a*, *b*, *c*, *d*, *e*, en *f*.
+
+Per toetsaanslag gaan we het batje laten bewegen. Dat kan met de functies
+- `rechterBatje.beweegOmhoog();`
+- `rechterBatje.beweegOmlaag();`
+- `rechterBatje.stop();`
+- `linkerBatje.beweegOmhoog();`
+- `linkerBatje.beweegOmlaag();`
+- `linkerBatje.stop();`
+
+▶▶▶ Zoek *Opdracht 5 (a)*. Hier wordt 🡹 (pijltje omhoog) ingedrukt op het toetsenbord. Roep de goede functie aan om het rechterbatje omhoog te laten bewegen.
+
+▶▶▶ Zoek *Opdracht 5 (b)*. Hier wordt 🡻 (pijltje omlaag) ingedrukt op het toetsenbord. Roep de goede functie aan om het rechterbatje omlaag te laten bewegen.
+
+▶▶▶ Zoek *Opdracht 5 (c)*. Hier wordt de toets `w` ingedrukt op het toetsenbord. Roep de goede functie aan om het linkerbatje te laten bewegen.
+
+▶▶▶ Zoek *Opdracht 5 (d)*. Hier wordt de toets `s` ingedrukt op het toetsenbord. Roep de goede functie aan.
+
+We hebben de toetsen afgehandeld om te batjes te laten bewegen. Probeer maar eens!
+
+Zoals je kan zien, stoppen de batjes nooit meer met bewegen. Het batje moet stoppen met bewegen zodra een toets wordt *losgelaten*.
+
+▶▶▶ Zoek *Opdracht 5 (e)*. Hier wordt een pijltjestoets losgelaten op het toetsenbord. Roep de goede functie aan.
+
+▶▶▶ Zoek *Opdracht 5 (f)*. Hier worden te toetsen `w` of `s` losgelaten op het toetsenbord. Roep de goede functie aan.
+
+Probeer de batjes te bewegen in het spel. Als je de pijtjestoetsen of `w` of `s` indrukt beweegt het batje. Als je te toetsen loslaat, dan stopt het batje met bewegen.
 
 ### Opdracht 6: Wijzigen van toetsen
 
+In opdracht 5 hebben we de batjes laten bewegen. De toetsen waren `w` en `s` voor het linkerbatje.
+
+Laten we de toetsen wijzigen waarmee het linkerbatje gaat bewegen, bijvoorbeeld naar `q` en `a`.
+
+▶▶▶ Zoek *Opdracht 6* in het bestand `pong.js`. Er staan drie opdrachten, *a*, *b* en *c*.
+
+▶▶▶ Bij *Opdracht 6 (a)*. Wijzig de toets `w` naar `q` om het linker batje omhoog te laten bewegen.
+
+▶▶▶ Bij *Opdracht 6 (b)*. Wijzig de toets `s` naar `a` om het linker batje omlaag te laten bewegen.
+
+▶▶▶ Bij *Opdracht 6 (c)*. Wijzig de toets `w` naar `q` en `s` naar `a` om het linker batje te laten stoppen.
+
 ### Opdracht 7: Snelheid
+
+De bal heeft een vaste snelheid. We kunnen de snelheid aanpassen zodat de bal langzamer of sneller beweegt.
+
+▶▶▶ Zoek *Opdracht 7* in het bestand `pong.js`.
+
+Hier staat een waarde `3`. We kunnen de waarde aanpassen naar iets anders om de snelheid van de bal te veranderen.
+
+▶▶▶ Verander de snelheid van de bal naar `1`.
+
+▶▶▶ Verander de snelheid van de bal naar `10`.
+
+▶▶▶ Verander de snelheid van de bal naar `30`.
+
+Kan je het spel nog spelen?
+
+▶▶▶ Verander de snelheid van de bal naar `0`. Wat gebeurt er?
 
 ### Opdracht 8: Richting van de bal
 
-### Opdracht 9: Willekeurig begin
+Als het spel begint, gaat de bal altijd naar rechtsboven. We kunnen de bal ook naar linksboven, linksonder of rechtsonder laten beginnen.
 
-### Opdracht 10: Kleuren
+▶▶▶ Zoek *Opdracht 8* in het bestand `pong.js`.
 
-### Opdracht 11: Ronde bal
+Er staan twee variabelen: `dx` en `dy`. De variabelen bepalen welke kant de bal op beweegt. Standaard begint de bal naar rechts (`dx` is positief) en naar boven (`dy` is negatief, door de `-`).
 
-### Opdracht 12: Score
+▶▶▶ Zet een `-` bij de `dx` erbij. Welke kant gaat de bal op?
 
-### Opdracht 13: Bal willekeurig laten stuiteren
+▶▶▶ Haal de `-` bij de `dy` weg. Welke kant gaat de bal op?
+
+▶▶▶ Haal de `-` bij de `dx` weer weg. Welke kant gaat de bal op?
+
+### Opdracht 9: Kleuren
+
+### Opdracht 10: Ronde bal
+
+### Opdracht 11: Score
+
+### Opdracht 12: Bal willekeurig laten stuiteren
