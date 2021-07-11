@@ -21,11 +21,11 @@ const maximaleVerticalePositieVanBatje = speelveld.hoogte - roosterGrootte - hoo
 
 const snelheidVanBatje = 12;
 
-// --- Opdracht 7 --- //
+// ▼▼▼ Opdracht 7 ▼▼▼ //
 
 const snelheidVanBalletje = 3;
 
-// --- Opdracht 7 --- //
+// ▲▲▲ Opdracht 7 ▲▲▲ //
 
 const score = {
     links: 0,
@@ -56,20 +56,20 @@ function maakMuur(verticalePositie) {
         hoogte: roosterGrootte, // hoogte van het rooster
     };
 }
-// --- Opdracht 1 --- //
+// ▼▼▼ Opdracht 1 ▼▼▼ //
 
 const muurBovenkant = maakMuur(0); // Helemaal bovenaan
 const muurOnderkant = maakMuur(speelveld.hoogte - roosterGrootte); // Onderkant van het speelveld min de roosterGrootte.
 
-// --- Opdracht 1 --- //
+// ▲▲▲ Opdracht 1 ▲▲▲ //
 
 
-// --- Opdracht 2 --- //
+// ▼▼▼ Opdracht 2 ▼▼▼ //
 
 const linkerBatje = maakBatje(roosterGrootte * 2); // 2x de roostergrootte vanaf de Linkerkant (2x losse ruimte aan de linkerkant)
 const rechterBatje = maakBatje(speelveld.breedte - 3 * roosterGrootte); // 3x de roostergrootte vanaf de Rechterkant (2x losse ruimte + 1x de breedte van het batje)
 
-// --- Opdracht 2 --- //
+// ▲▲▲ Opdracht 2 ▲▲▲ //
 
 
 const balletje = {
@@ -83,13 +83,13 @@ const balletje = {
     resetting: false,
 
 
-    // --- Opdracht 8 --- //
+    // ▼▼▼ Opdracht 8 ▼▼▼ //
 
     // Snelheid van balletje, begin altijd met naar de rechter boven hoek te bewegen
     dx: snelheidVanBalletje,
     dy: -snelheidVanBalletje,
 
-    // --- Opdracht 8 --- //
+    // ▲▲▲ Opdracht 8 ▲▲▲ //
 
     keerOm: function () { this.dy *= -1; },
 };
@@ -130,27 +130,27 @@ function verwerkBalletje() {
     if (balletje.y < roosterGrootte) {
         balletje.y = roosterGrootte;
 
-        // --- Opdracht 4 (a) --- //
+        // ▼▼▼ Opdracht 4 (a) ▼▼▼ //
 
         balletje.keerOm();
 
-        // --- Opdracht 4 (a) --- //
+        // ▲▲▲ Opdracht 4 (a) ▲▲▲ //
 
     } else if (balletje.y + roosterGrootte > speelveld.hoogte - roosterGrootte) {
         balletje.y = speelveld.hoogte - roosterGrootte * 2;
 
-        // --- Opdracht 4 (b) --- //
+        // ▼▼▼ Opdracht 4 (b) ▼▼▼ //
 
         balletje.keerOm();
 
-        // --- Opdracht 4 (b) --- //
+        // ▲▲▲ Opdracht 4 (b) ▲▲▲ //
     }
 
     // Zorg ervoor dat de bal opnieuw begint op de start positie zodra deze voorbij een batje komt(Maar alleen als we dat nog niet gedaan hebben).
     if ((balletje.x < 0 || balletje.x > speelveld.breedte) && !balletje.resetting) {
         balletje.resetting = true;
 
-        // --- Opdracht 12 --- //
+        // ▼▼▼ Opdracht 12 ▼▼▼ //
 
         if (balletje.x < 0) {
             score.rechts += 1;
@@ -158,7 +158,7 @@ function verwerkBalletje() {
             score.links += 1;
         }
 
-        // --- Opdracht 12 --- //
+        // ▲▲▲ Opdracht 12 ▲▲▲ //
 
 
         // We geven de spelers een halve seconde pauze voordat het balletje opnieuw begint.
@@ -237,7 +237,7 @@ function loop() {
         balletje.x = rechterBatje.x - balletje.breedte;
     }
 
-    // --- Opdracht 9 --- //
+    // ▼▼▼ Opdracht 9 ▼▼▼ //
 
     tekenRooster('grey', 1);
 
@@ -245,11 +245,11 @@ function loop() {
     tekenVierkant('white', rechterBatje);
 
 
-    // --- Opdracht 3 --- //
+    // ▼▼▼ Opdracht 3 ▼▼▼ //
 
     tekenCirkel('white', balletje);
 
-    // --- Opdracht 3 --- //
+    // ▲▲▲ Opdracht 3 ▲▲▲ //
 
 
     tekenVierkant('lightgrey', muurBovenkant);
@@ -265,15 +265,15 @@ function loop() {
         });
     }
 
-    // --- Opdracht 9 --- //
+    // ▲▲▲ Opdracht 9 ▲▲▲ //
 
 
-    // --- Opdracht 11 --- //
+    // ▼▼▼ Opdracht 11 ▼▼▼ //
 
     tekenTekst('lightblue', speelveld.breedte / 2 - 4 * roosterGrootte, roosterGrootte * 5, score.links);
     tekenTekst('lightblue', speelveld.breedte / 2 + 4 * roosterGrootte, roosterGrootte * 5, score.rechts);
 
-    // --- Opdracht 11 --- //
+    // ▲▲▲ Opdracht 11 ▲▲▲ //
 }
 
 // Luister naar toets aanslagen om de batjes naar boven of beneden te bewegen
@@ -282,44 +282,44 @@ function luisterToetsIndrukken(e) {
     if (e.key === 'ArrowUp' || e.key === 'Up') {
         // Pijltje naar boven zorgt ervoor dat het rechter batje omhoog gaat
 
-        // --- Opdracht 5 (a) --- //
+        // ▼▼▼ Opdracht 5 (a) ▼▼▼ //
 
         rechterBatje.beweegOmhoog();
 
-        // --- Opdracht 5 (a) --- //
+        // ▲▲▲ Opdracht 5 (a) ▲▲▲ //
 
     } else if (e.key === 'ArrowDown' || e.key === 'Down') {
         // Pijltje naar onder zorgt ervoor dat het rechter batje omlaag gaat
 
-        // --- Opdracht 5 (b) --- //
+        // ▼▼▼ Opdracht 5 (b) ▼▼▼ //
 
         rechterBatje.beweegOmlaag();
 
-        // --- Opdracht 5 (b) --- //
+        // ▲▲▲ Opdracht 5 (b) ▲▲▲ //
 
     }
 
-    // --- Opdracht 6 (a) --- //
+    // ▼▼▼ Opdracht 6 (a) ▼▼▼ //
     if (e.key === 'w') {
         // De 'w' toets zorgt ervoor dat het linker batje omhoog gaat
-        // --- Opdracht 6 (a) --- //
+        // ▲▲▲ Opdracht 6 (a) ▲▲▲ //
 
-        // --- Opdracht 5 (c) --- //
+        // ▼▼▼ Opdracht 5 (c) ▼▼▼ //
 
         linkerBatje.beweegOmhoog();
 
-        // --- Opdracht 5 (c) --- //
+        // ▲▲▲ Opdracht 5 (c) ▲▲▲ //
 
-    // --- Opdracht 6 (b) --- //
+    // ▼▼▼ Opdracht 6 (b) ▼▼▼ //
     } else if (e.key === 's') {
         // De 's' toets zorgt ervoor dat het linker batje omlaag gaat
-        // --- Opdracht 6 (b) --- //
+        // ▲▲▲ Opdracht 6 (b) ▲▲▲ //
 
-        // --- Opdracht 5 (d) --- //
+        // ▼▼▼ Opdracht 5 (d) ▼▼▼ //
 
         linkerBatje.beweegOmlaag();
 
-        // --- Opdracht 5 (d) --- //
+        // ▲▲▲ Opdracht 5 (d) ▲▲▲ //
 
     }
 }
@@ -328,21 +328,21 @@ function luisterToetsIndrukken(e) {
 function luisterToetsLoslaten(e) {
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Up' || e.key === 'Down') {
 
-        // --- Opdracht 5 (e) --- //
+        // ▼▼▼ Opdracht 5 (e) ▼▼▼ //
         rechterBatje.stop();
-        // --- Opdracht 5 (e) --- //
+        // ▲▲▲ Opdracht 5 (e) ▲▲▲ //
 
     }
 
-    // --- Opdracht 6 (c) --- //
+    // ▼▼▼ Opdracht 6 (c) ▼▼▼ //
     if (e.key === 'w' || e.key === 's') {
-    // --- Opdracht 6 (c) --- //
+    // ▲▲▲ Opdracht 6 (c) ▲▲▲ //
 
-        // --- Opdracht 5 (f) --- //
+        // ▼▼▼ Opdracht 5 (f) ▼▼▼ //
 
         linkerBatje.stop();
 
-        // --- Opdracht 5 (f) --- //
+        // ▲▲▲ Opdracht 5 (f) ▲▲▲ //
 
     }
 }
