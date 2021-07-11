@@ -20,7 +20,7 @@ Als je aan de linker kant de code aanpast, dan verandert de website automatisch 
 
 Dat was gemakkelijk! Nu komt het echte werk!
 
-![](images/0.png) // TODO
+![](images/0.png)
 
 ### Opdracht 1: Muren tekenen
 
