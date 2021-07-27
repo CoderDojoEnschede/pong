@@ -24,7 +24,7 @@ Dat was gemakkelijk! Nu komt het echte werk!
 
 ### Opdracht 1: Muren tekenen
 
-Op de website staat nog niet zoveel. We gaan eerst het speelveld tekenen van Pong.
+Op de website staat nog niet zoveel. We gaan eerst het speelveld tekenen van Pong. Er staat al een rooster getekend, zodat het tekenen van de andere onderdelen van het spel gemakkelijker is.
 
 Pong heeft twee muren. Als de bal een muur raakt, dan stuitert hij terug. We gaan de muren tekenen, zodat de bal er straks tegenaan kan stuiteren.
 
@@ -70,6 +70,8 @@ Het rechter batje moet getekend worden op 3 keer de grootte van het rooster van 
 
 ▶▶▶ Vul voor het linker batje `speelveld.breedte - 3 * roosterGrootte` in in de functie `maakBatje`.
 
+▶▶▶ Kan je bedenken waarom aan de linkerkant 2 keer de roostergrootte wordt opgeteld, en aan de rechterkant 3 keer de roostergrootte wordt afgetrokken?
+
 ![](images/2.png)
 
 ### Opdracht 3: Een bal
@@ -96,9 +98,9 @@ De bal moet niet alleen bewegen, maar ook stuiteren! Nu schuift de bal langs de 
 
 We kunnen de bal laten stuiteren door hem om te laten keren van ritchting als de bal de muur raakt. De bal heeft een functie `keerOm()` om de bal te laten omkeren.
 
-▶▶▶ Zoek *Opdracht 4 (a)*. Hier raakt de bal de bovenste muur. Laat be bal omkeren door `balletje.keerOm();` aan te roepen.
+▶▶▶ Zoek *Opdracht 4 (a)*. Hier raakt de bal de bovenste muur. Laat de bal omkeren door `balletje.keerOm();` aan te roepen.
 
-▶▶▶ Zoek *Opdracht 4 (b)*. Hier raakt de bal de onderste muur. Laat be bal omkeren.
+▶▶▶ Zoek *Opdracht 4 (b)*. Hier raakt de bal de onderste muur. Laat de bal omkeren.
 
 Nu moet de bal stuiteren als de bal de bovenste of onderste muur raakt.
 
@@ -150,11 +152,11 @@ Laten we de toetsen wijzigen waarmee het linkerbatje gaat bewegen, bijvoorbeeld 
 
 ▶▶▶ Zoek *Opdracht 6* in het bestand `pong.js`. Er staan drie opdrachten, *a*, *b* en *c*.
 
-▶▶▶ Bij *Opdracht 6 (a)*. Wijzig de toets `w` naar `q` om het linker batje omhoog te laten bewegen.
+▶▶▶ Bij *Opdracht 6 (a)*. Wijzig de toets `w` naar `q` om het linker batje bij het indrukken van de toets `q` omhoog te laten bewegen.
 
-▶▶▶ Bij *Opdracht 6 (b)*. Wijzig de toets `s` naar `a` om het linker batje omlaag te laten bewegen.
+▶▶▶ Bij *Opdracht 6 (b)*. Wijzig de toets `s` naar `a` om het linker batje bij het indrukken van de toets `a` omlaag te laten bewegen.
 
-▶▶▶ Bij *Opdracht 6 (c)*. Wijzig de toets `w` naar `q` en `s` naar `a` om het linker batje te laten stoppen.
+▶▶▶ Bij *Opdracht 6 (c)*. Wijzig de toets `w` naar `q` en `s` naar `a` om het linker batje te laten stoppen als een van de toetsen `q` of `a` niet meer worden ingedrukt.
 
 ![](images/6.png)
 
@@ -265,3 +267,7 @@ Je kunt een speler een punt geven door `score.links += 1;` of `score.rechts += 1
 Zie je dat de score wordt opgehoogd als een speler een punt scoort? Goed zo!
 
 ![](images/12.png)
+
+### En verder
+
+De opdrachten zijn klaar. Maar wie weet heb je in de tussentijd zelf ideeën gekregen om het spel verder uit te breiden. Ga je gang, probeer gerust dingen te veranderen en te verbeteren!
