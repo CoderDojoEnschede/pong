@@ -68,7 +68,7 @@ Het linker batje moet getekend worden op 2 keer de grootte van het rooster.
 
 Het rechter batje moet getekend worden op 3 keer de grootte van het rooster van de rechterkant van het speelveld. De rechterkant van het speelveld is `speelveld.breedte`. Houdt rekening met de dikte van het batje.
 
-▶▶▶ Vul voor het linker batje `speelveld.breedte - 3 * roosterGrootte` in in de functie `maakBatje`.
+▶▶▶ Vul voor het rechter batje `speelveld.breedte - 3 * roosterGrootte` in in de functie `maakBatje`.
 
 ▶▶▶ Kan je bedenken waarom aan de linkerkant 2 keer de roostergrootte wordt opgeteld, en aan de rechterkant 3 keer de roostergrootte wordt afgetrokken?
 
